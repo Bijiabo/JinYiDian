@@ -12,5 +12,5 @@
 
 #endif /* AMapSwift_Bridging_Header_h */
 
-#import <MAMapKit/MAMapKit.h>
+#import <AMapNaviKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>

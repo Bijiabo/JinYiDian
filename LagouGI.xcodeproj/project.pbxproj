@@ -11,9 +11,7 @@
 		6511DA251C77163C004EC1A3 /* PositionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511DA211C77163C004EC1A3 /* PositionListTableViewCell.swift */; };
 		6511DA261C77163C004EC1A3 /* AMapSwift-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 6511DA221C77163C004EC1A3 /* AMapSwift-Bridging-Header.h */; };
 		6511DA271C77163C004EC1A3 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511DA231C77163C004EC1A3 /* Alamofire-SwiftyJSON.swift */; };
-		6511DA2A1C771E13004EC1A3 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6511DA281C771E13004EC1A3 /* MAMapKit.framework */; };
 		6511DA2B1C771E13004EC1A3 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6511DA291C771E13004EC1A3 /* AMapSearchKit.framework */; };
-		6511DA2D1C771ED6004EC1A3 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6511DA2C1C771ED6004EC1A3 /* AMap.bundle */; };
 		6591DBBB1C7712310020B3D3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB61C7712310020B3D3 /* AlamofireImage.framework */; };
 		6591DBBC1C7712310020B3D3 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB61C7712310020B3D3 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6591DBBD1C7712310020B3D3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB71C7712310020B3D3 /* SwiftyJSON.framework */; };
@@ -40,6 +38,12 @@
 		65B08FB41C77115700E674D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65B08FB31C77115700E674D1 /* Assets.xcassets */; };
 		65B08FB71C77115700E674D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B08FB51C77115700E674D1 /* LaunchScreen.storyboard */; };
 		65B08FC21C77115700E674D1 /* LagouGITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B08FC11C77115700E674D1 /* LagouGITests.swift */; };
+		65C8FC5F1C774D1100C11DD6 /* AMapNaviKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C8FC5E1C774D1100C11DD6 /* AMapNaviKit.framework */; };
+		65C8FC611C774D4C00C11DD6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C8FC601C774D4C00C11DD6 /* AddressBook.framework */; };
+		65C8FC631C774D5400C11DD6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C8FC621C774D5400C11DD6 /* AVFoundation.framework */; };
+		65C8FC651C774D5C00C11DD6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C8FC641C774D5C00C11DD6 /* AudioToolbox.framework */; };
+		65C8FC681C774DA600C11DD6 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65C8FC661C774DA600C11DD6 /* AMap.bundle */; };
+		65C8FC691C774DA600C11DD6 /* AMapNavi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65C8FC671C774DA600C11DD6 /* AMapNavi.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +80,6 @@
 		6511DA231C77163C004EC1A3 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Alamofire-SwiftyJSON.swift"; path = "../Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		6511DA281C771E13004EC1A3 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = SDK/MAMapKit.framework; sourceTree = "<group>"; };
 		6511DA291C771E13004EC1A3 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = SDK/AMapSearchKit.framework; sourceTree = "<group>"; };
-		6511DA2C1C771ED6004EC1A3 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = SDK/MAMapKit.framework/Versions/3.2.1.94eef6d.752/Resources/AMap.bundle; sourceTree = "<group>"; };
 		6591DBB61C7712310020B3D3 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		6591DBB71C7712310020B3D3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		6591DBB81C7712310020B3D3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -93,8 +96,6 @@
 		6591DBDA1C7712C10020B3D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6591DBDC1C7712D10020B3D3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		659444BC1C77448500E7932D /* Fuzi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fuzi.framework; path = Carthage/Build/iOS/Fuzi.framework; sourceTree = "<group>"; };
-		659444BF1C77456400E7932D /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		659444C11C77459500E7932D /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		65B08FA61C77115700E674D1 /* LagouGI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LagouGI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B08FA91C77115700E674D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65B08FAE1C77115700E674D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +106,12 @@
 		65B08FBD1C77115700E674D1 /* LagouGITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LagouGITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B08FC11C77115700E674D1 /* LagouGITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LagouGITests.swift; sourceTree = "<group>"; };
 		65B08FC31C77115700E674D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65C8FC5E1C774D1100C11DD6 /* AMapNaviKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapNaviKit.framework; path = SDK/AMapNaviKit.framework; sourceTree = "<group>"; };
+		65C8FC601C774D4C00C11DD6 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		65C8FC621C774D5400C11DD6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		65C8FC641C774D5C00C11DD6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		65C8FC661C774DA600C11DD6 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = SDK/AMapNaviKit.framework/Versions/1.5.0.3533b29/Resources/AMap.bundle; sourceTree = "<group>"; };
+		65C8FC671C774DA600C11DD6 /* AMapNavi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapNavi.bundle; path = SDK/AMapNaviKit.framework/Versions/1.5.0.3533b29/Resources/AMapNavi.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +119,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6511DA2A1C771E13004EC1A3 /* MAMapKit.framework in Frameworks */,
+				6591DBD11C77128F0020B3D3 /* CoreLocation.framework in Frameworks */,
+				6591DBCD1C77127D0020B3D3 /* SystemConfiguration.framework in Frameworks */,
+				6591DBCF1C7712850020B3D3 /* CoreTelephony.framework in Frameworks */,
+				65C8FC651C774D5C00C11DD6 /* AudioToolbox.framework in Frameworks */,
+				65C8FC631C774D5400C11DD6 /* AVFoundation.framework in Frameworks */,
+				65C8FC611C774D4C00C11DD6 /* AddressBook.framework in Frameworks */,
+				65C8FC5F1C774D1100C11DD6 /* AMapNaviKit.framework in Frameworks */,
 				6511DA2B1C771E13004EC1A3 /* AMapSearchKit.framework in Frameworks */,
 				6591DBDD1C7712D10020B3D3 /* libz.tbd in Frameworks */,
 				6591DBDB1C7712C10020B3D3 /* UIKit.framework in Frameworks */,
@@ -120,9 +133,6 @@
 				6591DBD71C7712B00020B3D3 /* CoreGraphics.framework in Frameworks */,
 				6591DBD51C7712A70020B3D3 /* QuartzCore.framework in Frameworks */,
 				6591DBD31C7712960020B3D3 /* OpenGLES.framework in Frameworks */,
-				6591DBD11C77128F0020B3D3 /* CoreLocation.framework in Frameworks */,
-				6591DBCF1C7712850020B3D3 /* CoreTelephony.framework in Frameworks */,
-				6591DBCD1C77127D0020B3D3 /* SystemConfiguration.framework in Frameworks */,
 				6591DBCB1C7712750020B3D3 /* libstdc++.tbd in Frameworks */,
 				6591DBC91C77126D0020B3D3 /* Security.framework in Frameworks */,
 				6591DBC71C7712620020B3D3 /* libstdc++.6.0.9.tbd in Frameworks */,
@@ -146,6 +156,10 @@
 		6591DBDE1C7713060020B3D3 /* FrameWorks */ = {
 			isa = PBXGroup;
 			children = (
+				65C8FC641C774D5C00C11DD6 /* AudioToolbox.framework */,
+				65C8FC621C774D5400C11DD6 /* AVFoundation.framework */,
+				65C8FC601C774D4C00C11DD6 /* AddressBook.framework */,
+				65C8FC5E1C774D1100C11DD6 /* AMapNaviKit.framework */,
 				659444BC1C77448500E7932D /* Fuzi.framework */,
 				6511DA281C771E13004EC1A3 /* MAMapKit.framework */,
 				6511DA291C771E13004EC1A3 /* AMapSearchKit.framework */,
@@ -187,9 +201,8 @@
 		65B08F9D1C77115700E674D1 = {
 			isa = PBXGroup;
 			children = (
-				659444C11C77459500E7932D /* libxml2.2.tbd */,
-				659444BF1C77456400E7932D /* libxml2.tbd */,
-				6511DA2C1C771ED6004EC1A3 /* AMap.bundle */,
+				65C8FC661C774DA600C11DD6 /* AMap.bundle */,
+				65C8FC671C774DA600C11DD6 /* AMapNavi.bundle */,
 				6591DBDE1C7713060020B3D3 /* FrameWorks */,
 				65B08FA81C77115700E674D1 /* LagouGI */,
 				65B08FC01C77115700E674D1 /* LagouGITests */,
@@ -315,7 +328,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6511DA2D1C771ED6004EC1A3 /* AMap.bundle in Resources */,
+				65C8FC681C774DA600C11DD6 /* AMap.bundle in Resources */,
+				65C8FC691C774DA600C11DD6 /* AMapNavi.bundle in Resources */,
 				65B08FB71C77115700E674D1 /* LaunchScreen.storyboard in Resources */,
 				65B08FB41C77115700E674D1 /* Assets.xcassets in Resources */,
 				65B08FAF1C77115700E674D1 /* Main.storyboard in Resources */,
@@ -496,6 +510,7 @@
 				INFOPLIST_FILE = LagouGI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bijiabo.LagouGI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LagouGI/AMapSwift-Bridging-Header.h";
@@ -515,6 +530,7 @@
 				INFOPLIST_FILE = LagouGI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bijiabo.LagouGI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LagouGI/AMapSwift-Bridging-Header.h";

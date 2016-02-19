@@ -34,7 +34,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9s-ij-PFu">
-                                            <rect key="frame" x="8" y="62" width="584" height="21"/>
+                                            <rect key="frame" x="8" y="62" width="150" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="0uD-gS-904"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.96078431369999995" green="0.054901960780000002" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -45,14 +48,23 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上班时间" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrG-Xb-2Ng">
+                                            <rect key="frame" x="178" y="62" width="414" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="TrG-Xb-2Ng" secondAttribute="trailing" constant="8" id="5cG-Ou-lv4"/>
                                         <constraint firstItem="i9s-ij-PFu" firstAttribute="leading" secondItem="58K-cH-zt6" secondAttribute="leading" constant="8" id="6lR-TP-Rgt"/>
                                         <constraint firstAttribute="trailing" secondItem="8dD-eH-LfG" secondAttribute="trailing" constant="8" id="8W3-FF-OSr"/>
+                                        <constraint firstItem="TrG-Xb-2Ng" firstAttribute="leading" secondItem="i9s-ij-PFu" secondAttribute="trailing" constant="20" id="EHA-Yu-F32"/>
                                         <constraint firstItem="8dD-eH-LfG" firstAttribute="leading" secondItem="58K-cH-zt6" secondAttribute="leading" constant="8" id="Hga-MQ-9iD"/>
                                         <constraint firstAttribute="trailing" secondItem="yNe-7v-qVr" secondAttribute="trailing" constant="8" id="NyT-1N-1kg"/>
                                         <constraint firstItem="fCB-u7-hMd" firstAttribute="top" secondItem="8dD-eH-LfG" secondAttribute="bottom" constant="8" id="aCC-vi-lbM"/>
                                         <constraint firstItem="yNe-7v-qVr" firstAttribute="top" secondItem="i9s-ij-PFu" secondAttribute="bottom" constant="14" id="bG6-Og-pJl"/>
+                                        <constraint firstItem="TrG-Xb-2Ng" firstAttribute="centerY" secondItem="i9s-ij-PFu" secondAttribute="centerY" id="bnP-sA-sRX"/>
                                         <constraint firstItem="fCB-u7-hMd" firstAttribute="leading" secondItem="58K-cH-zt6" secondAttribute="leading" constant="8" id="gKK-hx-eqT"/>
                                         <constraint firstAttribute="trailing" secondItem="i9s-ij-PFu" secondAttribute="trailing" constant="8" id="jLy-mc-hls"/>
                                         <constraint firstItem="8dD-eH-LfG" firstAttribute="top" secondItem="58K-cH-zt6" secondAttribute="top" constant="8" id="mLt-f1-bi8"/>
@@ -60,12 +72,18 @@
                                         <constraint firstAttribute="trailing" secondItem="fCB-u7-hMd" secondAttribute="trailing" constant="8" id="nOb-yC-PwX"/>
                                         <constraint firstItem="i9s-ij-PFu" firstAttribute="top" secondItem="fCB-u7-hMd" secondAttribute="bottom" constant="8" id="xfd-Jl-Bqn"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="jLy-mc-hls"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="yNe-7v-qVr" id="sDc-AN-HfP"/>
                                     <outlet property="companyInformationLabel" destination="fCB-u7-hMd" id="No7-RX-yqB"/>
                                     <outlet property="companyNameLabel" destination="8dD-eH-LfG" id="P83-sD-ysI"/>
                                     <outlet property="salaryLabel" destination="i9s-ij-PFu" id="ZG3-bX-69e"/>
+                                    <outlet property="timeCountLabel" destination="TrG-Xb-2Ng" id="bc1-hm-Zbv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

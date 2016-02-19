@@ -14,16 +14,31 @@ class PositionListTableViewCell: UITableViewCell {
     @IBOutlet weak var companyInformationLabel: UILabel!
     @IBOutlet weak var salaryLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var timeCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        _setupViews()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        _setupViews()
+    }
+    
+    private func _setupViews() {
+        companyName = ""
+        companyInformation = ""
+        address = "地址获取中..."
+        timeCount = "路程时间计算中..."
     }
     
     var companyName: String = "" {
@@ -52,5 +67,10 @@ class PositionListTableViewCell: UITableViewCell {
     
     var positionId: String = String()
     
+    var timeCount: String = "" {
+        didSet {
+            timeCountLabel.text = timeCount
+        }
+    }
 
 }
