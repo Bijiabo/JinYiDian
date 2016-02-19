@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  LagouGI
+//  Lagou+GI
 //
 //  Created by huchunbo on 16/2/19.
 //  Copyright © 2016年 Bijiabo. All rights reserved.
@@ -47,14 +47,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.bijiabo.LagouGI" in the application's documents Application Support directory.
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.bijiabo.Lagou_GI" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1]
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("LagouGI", withExtension: "momd")!
+        let modelURL = NSBundle.mainBundle().URLForResource("Lagou_GI", withExtension: "momd")!
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
 

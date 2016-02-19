@@ -7,8 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6511DA241C77163C004EC1A3 /* PositionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511DA201C77163C004EC1A3 /* PositionListTableViewController.swift */; };
+		6511DA251C77163C004EC1A3 /* PositionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511DA211C77163C004EC1A3 /* PositionListTableViewCell.swift */; };
+		6511DA261C77163C004EC1A3 /* AMapSwift-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 6511DA221C77163C004EC1A3 /* AMapSwift-Bridging-Header.h */; };
+		6511DA271C77163C004EC1A3 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511DA231C77163C004EC1A3 /* Alamofire-SwiftyJSON.swift */; };
+		6511DA2A1C771E13004EC1A3 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6511DA281C771E13004EC1A3 /* MAMapKit.framework */; };
+		6511DA2B1C771E13004EC1A3 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6511DA291C771E13004EC1A3 /* AMapSearchKit.framework */; };
+		6511DA2D1C771ED6004EC1A3 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6511DA2C1C771ED6004EC1A3 /* AMap.bundle */; };
+		6591DBBB1C7712310020B3D3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB61C7712310020B3D3 /* AlamofireImage.framework */; };
+		6591DBBC1C7712310020B3D3 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB61C7712310020B3D3 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6591DBBD1C7712310020B3D3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB71C7712310020B3D3 /* SwiftyJSON.framework */; };
+		6591DBBE1C7712310020B3D3 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB71C7712310020B3D3 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6591DBBF1C7712310020B3D3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB81C7712310020B3D3 /* Alamofire.framework */; };
+		6591DBC01C7712310020B3D3 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB81C7712310020B3D3 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6591DBC71C7712620020B3D3 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBC61C7712620020B3D3 /* libstdc++.6.0.9.tbd */; };
+		6591DBC91C77126D0020B3D3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBC81C77126D0020B3D3 /* Security.framework */; };
+		6591DBCB1C7712750020B3D3 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBCA1C7712750020B3D3 /* libstdc++.tbd */; };
+		6591DBCD1C77127D0020B3D3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBCC1C77127D0020B3D3 /* SystemConfiguration.framework */; };
+		6591DBCF1C7712850020B3D3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBCE1C7712850020B3D3 /* CoreTelephony.framework */; };
+		6591DBD11C77128F0020B3D3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBD01C77128F0020B3D3 /* CoreLocation.framework */; };
+		6591DBD31C7712960020B3D3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBD21C7712960020B3D3 /* OpenGLES.framework */; };
+		6591DBD51C7712A70020B3D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBD41C7712A70020B3D3 /* QuartzCore.framework */; };
+		6591DBD71C7712B00020B3D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBD61C7712B00020B3D3 /* CoreGraphics.framework */; };
+		6591DBD91C7712B80020B3D3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBD81C7712B80020B3D3 /* CoreFoundation.framework */; };
+		6591DBDB1C7712C10020B3D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBDA1C7712C10020B3D3 /* UIKit.framework */; };
+		6591DBDD1C7712D10020B3D3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBDC1C7712D10020B3D3 /* libz.tbd */; };
 		65B08FAA1C77115700E674D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B08FA91C77115700E674D1 /* AppDelegate.swift */; };
-		65B08FAC1C77115700E674D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B08FAB1C77115700E674D1 /* ViewController.swift */; };
 		65B08FAF1C77115700E674D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B08FAD1C77115700E674D1 /* Main.storyboard */; };
 		65B08FB21C77115700E674D1 /* LagouGI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65B08FB01C77115700E674D1 /* LagouGI.xcdatamodeld */; };
 		65B08FB41C77115700E674D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65B08FB31C77115700E674D1 /* Assets.xcassets */; };
@@ -26,10 +50,47 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6591DBC51C7712310020B3D3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6591DBBE1C7712310020B3D3 /* SwiftyJSON.framework in Embed Frameworks */,
+				6591DBC01C7712310020B3D3 /* Alamofire.framework in Embed Frameworks */,
+				6591DBBC1C7712310020B3D3 /* AlamofireImage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6511DA201C77163C004EC1A3 /* PositionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionListTableViewController.swift; sourceTree = "<group>"; };
+		6511DA211C77163C004EC1A3 /* PositionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionListTableViewCell.swift; sourceTree = "<group>"; };
+		6511DA221C77163C004EC1A3 /* AMapSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMapSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		6511DA231C77163C004EC1A3 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Alamofire-SwiftyJSON.swift"; path = "../Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
+		6511DA281C771E13004EC1A3 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = SDK/MAMapKit.framework; sourceTree = "<group>"; };
+		6511DA291C771E13004EC1A3 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = SDK/AMapSearchKit.framework; sourceTree = "<group>"; };
+		6511DA2C1C771ED6004EC1A3 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = SDK/MAMapKit.framework/Versions/3.2.1.94eef6d.752/Resources/AMap.bundle; sourceTree = "<group>"; };
+		6591DBB61C7712310020B3D3 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		6591DBB71C7712310020B3D3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		6591DBB81C7712310020B3D3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		6591DBC61C7712620020B3D3 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		6591DBC81C77126D0020B3D3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6591DBCA1C7712750020B3D3 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		6591DBCC1C77127D0020B3D3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6591DBCE1C7712850020B3D3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6591DBD01C77128F0020B3D3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6591DBD21C7712960020B3D3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6591DBD41C7712A70020B3D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6591DBD61C7712B00020B3D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6591DBD81C7712B80020B3D3 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		6591DBDA1C7712C10020B3D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6591DBDC1C7712D10020B3D3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		65B08FA61C77115700E674D1 /* LagouGI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LagouGI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B08FA91C77115700E674D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65B08FAB1C77115700E674D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65B08FAE1C77115700E674D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65B08FB11C77115700E674D1 /* LagouGI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LagouGI.xcdatamodel; sourceTree = "<group>"; };
 		65B08FB31C77115700E674D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +106,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6511DA2A1C771E13004EC1A3 /* MAMapKit.framework in Frameworks */,
+				6511DA2B1C771E13004EC1A3 /* AMapSearchKit.framework in Frameworks */,
+				6591DBDD1C7712D10020B3D3 /* libz.tbd in Frameworks */,
+				6591DBDB1C7712C10020B3D3 /* UIKit.framework in Frameworks */,
+				6591DBD91C7712B80020B3D3 /* CoreFoundation.framework in Frameworks */,
+				6591DBD71C7712B00020B3D3 /* CoreGraphics.framework in Frameworks */,
+				6591DBD51C7712A70020B3D3 /* QuartzCore.framework in Frameworks */,
+				6591DBD31C7712960020B3D3 /* OpenGLES.framework in Frameworks */,
+				6591DBD11C77128F0020B3D3 /* CoreLocation.framework in Frameworks */,
+				6591DBCF1C7712850020B3D3 /* CoreTelephony.framework in Frameworks */,
+				6591DBCD1C77127D0020B3D3 /* SystemConfiguration.framework in Frameworks */,
+				6591DBCB1C7712750020B3D3 /* libstdc++.tbd in Frameworks */,
+				6591DBC91C77126D0020B3D3 /* Security.framework in Frameworks */,
+				6591DBC71C7712620020B3D3 /* libstdc++.6.0.9.tbd in Frameworks */,
+				6591DBBD1C7712310020B3D3 /* SwiftyJSON.framework in Frameworks */,
+				6591DBBF1C7712310020B3D3 /* Alamofire.framework in Frameworks */,
+				6591DBBB1C7712310020B3D3 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +136,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6591DBDE1C7713060020B3D3 /* FrameWorks */ = {
+			isa = PBXGroup;
+			children = (
+				6511DA281C771E13004EC1A3 /* MAMapKit.framework */,
+				6511DA291C771E13004EC1A3 /* AMapSearchKit.framework */,
+				6591DBDC1C7712D10020B3D3 /* libz.tbd */,
+				6591DBDA1C7712C10020B3D3 /* UIKit.framework */,
+				6591DBD81C7712B80020B3D3 /* CoreFoundation.framework */,
+				6591DBD61C7712B00020B3D3 /* CoreGraphics.framework */,
+				6591DBD41C7712A70020B3D3 /* QuartzCore.framework */,
+				6591DBD21C7712960020B3D3 /* OpenGLES.framework */,
+				6591DBD01C77128F0020B3D3 /* CoreLocation.framework */,
+				6591DBCE1C7712850020B3D3 /* CoreTelephony.framework */,
+				6591DBCC1C77127D0020B3D3 /* SystemConfiguration.framework */,
+				6591DBCA1C7712750020B3D3 /* libstdc++.tbd */,
+				6591DBC81C77126D0020B3D3 /* Security.framework */,
+				6591DBC61C7712620020B3D3 /* libstdc++.6.0.9.tbd */,
+				6591DBB61C7712310020B3D3 /* AlamofireImage.framework */,
+				6591DBB71C7712310020B3D3 /* SwiftyJSON.framework */,
+				6591DBB81C7712310020B3D3 /* Alamofire.framework */,
+			);
+			name = FrameWorks;
+			sourceTree = "<group>";
+		};
+		6591DBE01C77131F0020B3D3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6511DA201C77163C004EC1A3 /* PositionListTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6591DBE11C77132C0020B3D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6511DA211C77163C004EC1A3 /* PositionListTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		65B08F9D1C77115700E674D1 = {
 			isa = PBXGroup;
 			children = (
+				6511DA2C1C771ED6004EC1A3 /* AMap.bundle */,
+				6591DBDE1C7713060020B3D3 /* FrameWorks */,
 				65B08FA81C77115700E674D1 /* LagouGI */,
 				65B08FC01C77115700E674D1 /* LagouGITests */,
 				65B08FA71C77115700E674D1 /* Products */,
@@ -79,8 +199,11 @@
 		65B08FA81C77115700E674D1 /* LagouGI */ = {
 			isa = PBXGroup;
 			children = (
+				6511DA221C77163C004EC1A3 /* AMapSwift-Bridging-Header.h */,
+				6511DA231C77163C004EC1A3 /* Alamofire-SwiftyJSON.swift */,
+				6591DBE11C77132C0020B3D3 /* Views */,
+				6591DBE01C77131F0020B3D3 /* Controllers */,
 				65B08FA91C77115700E674D1 /* AppDelegate.swift */,
-				65B08FAB1C77115700E674D1 /* ViewController.swift */,
 				65B08FAD1C77115700E674D1 /* Main.storyboard */,
 				65B08FB31C77115700E674D1 /* Assets.xcassets */,
 				65B08FB51C77115700E674D1 /* LaunchScreen.storyboard */,
@@ -109,6 +232,8 @@
 				65B08FA21C77115700E674D1 /* Sources */,
 				65B08FA31C77115700E674D1 /* Frameworks */,
 				65B08FA41C77115700E674D1 /* Resources */,
+				6591DBC51C7712310020B3D3 /* Embed Frameworks */,
+				65B4FAA41C771456008BF3A0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -180,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6511DA2D1C771ED6004EC1A3 /* AMap.bundle in Resources */,
 				65B08FB71C77115700E674D1 /* LaunchScreen.storyboard in Resources */,
 				65B08FB41C77115700E674D1 /* Assets.xcassets in Resources */,
 				65B08FAF1C77115700E674D1 /* Main.storyboard in Resources */,
@@ -195,12 +321,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65B4FAA41C771456008BF3A0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		65B08FA21C77115700E674D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65B08FAC1C77115700E674D1 /* ViewController.swift in Sources */,
+				6511DA241C77163C004EC1A3 /* PositionListTableViewController.swift in Sources */,
+				6511DA251C77163C004EC1A3 /* PositionListTableViewCell.swift in Sources */,
+				6511DA261C77163C004EC1A3 /* AMapSwift-Bridging-Header.h in Sources */,
+				6511DA271C77163C004EC1A3 /* Alamofire-SwiftyJSON.swift in Sources */,
 				65B08FB21C77115700E674D1 /* LagouGI.xcdatamodeld in Sources */,
 				65B08FAA1C77115700E674D1 /* AppDelegate.swift in Sources */,
 			);
@@ -329,10 +476,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/SDK",
+				);
 				INFOPLIST_FILE = LagouGI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bijiabo.LagouGI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LagouGI/AMapSwift-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -340,10 +493,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/SDK",
+				);
 				INFOPLIST_FILE = LagouGI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bijiabo.LagouGI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LagouGI/AMapSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -390,6 +549,7 @@
 				65B08FC81C77115700E674D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65B08FC91C77115700E674D1 /* Build configuration list for PBXNativeTarget "LagouGITests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +558,7 @@
 				65B08FCB1C77115700E674D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
