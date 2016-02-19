@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Fuzi
 
 class PositionListTableViewController: UITableViewController {
     
@@ -28,15 +29,12 @@ class PositionListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return _data.count
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
@@ -46,6 +44,20 @@ class PositionListTableViewController: UITableViewController {
             cell.companyName = "\(currentData["companyName"].stringValue) - \(currentData["companyShortName"].stringValue)"
             cell.companyInformation = "\(currentData["financeStage"].stringValue) - \(currentData["industryField"].stringValue) \n\(currentData["companySize"].stringValue)"
             cell.salary = currentData["salary"].stringValue
+            cell.positionId = currentData["positionId"].stringValue
+            
+            // get address information
+            cell.address = "获取地址中..."
+            _loadPositionDataForPositionId(cell.positionId, completeHandler: { (address) -> Void in
+                if let address = address {
+                    cell.address = address
+                } else {
+                    cell.address = "地址获取失败"
+                }
+            })
+            
+            // set background color
+            cell.backgroundColor = indexPath.row%2 == 0 ? UIColor(red:0.96, green:0.96, blue:0.96, alpha:1) : UIColor.whiteColor()
             
             return cell
         } else {
@@ -58,6 +70,16 @@ class PositionListTableViewController: UITableViewController {
         }
         
     }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        guard let cell = tableView.cellForRowAtIndexPath(indexPath) as? PositionListTableViewCell else {return}
+        
+//        _loadPositionDataForPositionId(cell.positionId)
+    }
+    
+    // MARK: - Custom view functions
     
     private func _reloadTableView() {
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
@@ -103,6 +125,31 @@ class PositionListTableViewController: UITableViewController {
                 
                 self._reloadTableView()
             })
+    }
+    
+    private func _loadPositionDataForPositionId(id: String, completeHandler: (address: String?)->Void) {
+        let urlString: String = "http://www.lagou.com/jobs/\(id).html"
+        Alamofire.request(.GET, urlString)
+        .response { (request, response, data, error) -> Void in
+            if error != nil || data == nil {
+                print(error)
+                return
+            }
+            
+            let htmlString: String = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
+            
+            do {
+                // if encoding is omitted, it defaults to NSUTF8StringEncoding
+                let doc = try HTMLDocument(string: htmlString, encoding: NSUTF8StringEncoding)
+                
+                // CSS queries
+                let address = doc.css(".job_company dd div").first?.stringValue
+                completeHandler(address: address)
+                
+            } catch let error {
+                print(error)
+            }
+        }
     }
 
 }

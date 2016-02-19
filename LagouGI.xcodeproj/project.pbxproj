@@ -32,6 +32,8 @@
 		6591DBD91C7712B80020B3D3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBD81C7712B80020B3D3 /* CoreFoundation.framework */; };
 		6591DBDB1C7712C10020B3D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBDA1C7712C10020B3D3 /* UIKit.framework */; };
 		6591DBDD1C7712D10020B3D3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBDC1C7712D10020B3D3 /* libz.tbd */; };
+		659444BD1C77448500E7932D /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659444BC1C77448500E7932D /* Fuzi.framework */; };
+		659444BE1C77448500E7932D /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 659444BC1C77448500E7932D /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		65B08FAA1C77115700E674D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B08FA91C77115700E674D1 /* AppDelegate.swift */; };
 		65B08FAF1C77115700E674D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B08FAD1C77115700E674D1 /* Main.storyboard */; };
 		65B08FB21C77115700E674D1 /* LagouGI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65B08FB01C77115700E674D1 /* LagouGI.xcdatamodeld */; };
@@ -57,6 +59,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				659444BE1C77448500E7932D /* Fuzi.framework in Embed Frameworks */,
 				6591DBBE1C7712310020B3D3 /* SwiftyJSON.framework in Embed Frameworks */,
 				6591DBC01C7712310020B3D3 /* Alamofire.framework in Embed Frameworks */,
 				6591DBBC1C7712310020B3D3 /* AlamofireImage.framework in Embed Frameworks */,
@@ -89,6 +92,9 @@
 		6591DBD81C7712B80020B3D3 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		6591DBDA1C7712C10020B3D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6591DBDC1C7712D10020B3D3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		659444BC1C77448500E7932D /* Fuzi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fuzi.framework; path = Carthage/Build/iOS/Fuzi.framework; sourceTree = "<group>"; };
+		659444BF1C77456400E7932D /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		659444C11C77459500E7932D /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		65B08FA61C77115700E674D1 /* LagouGI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LagouGI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B08FA91C77115700E674D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65B08FAE1C77115700E674D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 				6591DBC71C7712620020B3D3 /* libstdc++.6.0.9.tbd in Frameworks */,
 				6591DBBD1C7712310020B3D3 /* SwiftyJSON.framework in Frameworks */,
 				6591DBBF1C7712310020B3D3 /* Alamofire.framework in Frameworks */,
+				659444BD1C77448500E7932D /* Fuzi.framework in Frameworks */,
 				6591DBBB1C7712310020B3D3 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 		6591DBDE1C7713060020B3D3 /* FrameWorks */ = {
 			isa = PBXGroup;
 			children = (
+				659444BC1C77448500E7932D /* Fuzi.framework */,
 				6511DA281C771E13004EC1A3 /* MAMapKit.framework */,
 				6511DA291C771E13004EC1A3 /* AMapSearchKit.framework */,
 				6591DBDC1C7712D10020B3D3 /* libz.tbd */,
@@ -179,6 +187,8 @@
 		65B08F9D1C77115700E674D1 = {
 			isa = PBXGroup;
 			children = (
+				659444C11C77459500E7932D /* libxml2.2.tbd */,
+				659444BF1C77456400E7932D /* libxml2.tbd */,
 				6511DA2C1C771ED6004EC1A3 /* AMap.bundle */,
 				6591DBDE1C7713060020B3D3 /* FrameWorks */,
 				65B08FA81C77115700E674D1 /* LagouGI */,
@@ -330,6 +340,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Fuzi.framework",
 			);
 			outputPaths = (
 			);
@@ -427,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -465,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -481,7 +492,9 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/SDK",
 				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = LagouGI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bijiabo.LagouGI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,7 +511,9 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/SDK",
 				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = LagouGI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bijiabo.LagouGI;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -13,6 +13,7 @@ class PositionListTableViewCell: UITableViewCell {
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var companyInformationLabel: UILabel!
     @IBOutlet weak var salaryLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,6 +43,14 @@ class PositionListTableViewCell: UITableViewCell {
             salaryLabel.text = salary
         }
     }
+    
+    var address: String = "" {
+        didSet {
+            addressLabel.text = address
+        }
+    }
+    
+    var positionId: String = String()
     
 
 }

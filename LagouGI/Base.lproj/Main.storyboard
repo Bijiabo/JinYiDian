@@ -9,16 +9,16 @@
         <scene sceneID="OzY-gZ-eFB">
             <objects>
                 <tableViewController id="szB-UM-EGh" customClass="PositionListTableViewController" customModule="LagouGI" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="28" sectionFooterHeight="28" id="XmQ-Sp-LQ0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="136" sectionHeaderHeight="28" sectionFooterHeight="28" id="XmQ-Sp-LQ0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PositionListTableViewCell" rowHeight="112" id="3mO-Wi-vmR" customClass="PositionListTableViewCell" customModule="LagouGI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="112"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PositionListTableViewCell" rowHeight="136" id="3mO-Wi-vmR" customClass="PositionListTableViewCell" customModule="LagouGI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="136"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3mO-Wi-vmR" id="58K-cH-zt6">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="111.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="135.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dD-eH-LfG">
@@ -39,20 +39,30 @@
                                             <color key="textColor" red="0.96078431369999995" green="0.054901960780000002" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNe-7v-qVr">
+                                            <rect key="frame" x="8" y="97" width="584" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="i9s-ij-PFu" firstAttribute="leading" secondItem="58K-cH-zt6" secondAttribute="leading" constant="8" id="6lR-TP-Rgt"/>
                                         <constraint firstAttribute="trailing" secondItem="8dD-eH-LfG" secondAttribute="trailing" constant="8" id="8W3-FF-OSr"/>
                                         <constraint firstItem="8dD-eH-LfG" firstAttribute="leading" secondItem="58K-cH-zt6" secondAttribute="leading" constant="8" id="Hga-MQ-9iD"/>
+                                        <constraint firstAttribute="trailing" secondItem="yNe-7v-qVr" secondAttribute="trailing" constant="8" id="NyT-1N-1kg"/>
                                         <constraint firstItem="fCB-u7-hMd" firstAttribute="top" secondItem="8dD-eH-LfG" secondAttribute="bottom" constant="8" id="aCC-vi-lbM"/>
+                                        <constraint firstItem="yNe-7v-qVr" firstAttribute="top" secondItem="i9s-ij-PFu" secondAttribute="bottom" constant="14" id="bG6-Og-pJl"/>
                                         <constraint firstItem="fCB-u7-hMd" firstAttribute="leading" secondItem="58K-cH-zt6" secondAttribute="leading" constant="8" id="gKK-hx-eqT"/>
                                         <constraint firstAttribute="trailing" secondItem="i9s-ij-PFu" secondAttribute="trailing" constant="8" id="jLy-mc-hls"/>
                                         <constraint firstItem="8dD-eH-LfG" firstAttribute="top" secondItem="58K-cH-zt6" secondAttribute="top" constant="8" id="mLt-f1-bi8"/>
+                                        <constraint firstItem="yNe-7v-qVr" firstAttribute="leading" secondItem="58K-cH-zt6" secondAttribute="leading" constant="8" id="mgI-y6-VNa"/>
                                         <constraint firstAttribute="trailing" secondItem="fCB-u7-hMd" secondAttribute="trailing" constant="8" id="nOb-yC-PwX"/>
                                         <constraint firstItem="i9s-ij-PFu" firstAttribute="top" secondItem="fCB-u7-hMd" secondAttribute="bottom" constant="8" id="xfd-Jl-Bqn"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="addressLabel" destination="yNe-7v-qVr" id="sDc-AN-HfP"/>
                                     <outlet property="companyInformationLabel" destination="fCB-u7-hMd" id="No7-RX-yqB"/>
                                     <outlet property="companyNameLabel" destination="8dD-eH-LfG" id="P83-sD-ysI"/>
                                     <outlet property="salaryLabel" destination="i9s-ij-PFu" id="ZG3-bX-69e"/>
