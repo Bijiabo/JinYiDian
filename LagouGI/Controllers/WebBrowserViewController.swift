@@ -116,7 +116,7 @@ extension WebBrowserViewController: WKNavigationDelegate {
     
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         _navigationItem.title = webView.title
-        webView.evaluateJavaScript("$('#go_app').hide();", completionHandler: nil)
+        webView.evaluateJavaScript("$('#go_app,#header').hide();", completionHandler: nil)
     }
 }
 

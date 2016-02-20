@@ -25,6 +25,8 @@ class PositionListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        addressLabel.textColor = UIColor(red:0, green:0.71, blue:0.54, alpha:1)
+        timeCountLabel.textColor = UIColor(red:0, green:0.71, blue:0.54, alpha:1)
         _setupViews()
         
         _setupBordersForButton(industryFieldButton)
@@ -45,6 +47,7 @@ class PositionListTableViewCell: UITableViewCell {
     }
     
     private func _setupViews() {
+        logoImageView.image = nil
         companyName = ""
         address = ""
         timeCount = ""

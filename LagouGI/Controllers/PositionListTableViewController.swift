@@ -36,7 +36,7 @@ class PositionListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "LagouGI"
+        title = _kd
         clearsSelectionOnViewWillAppear = true
         tableView.estimatedRowHeight = 180.0
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -133,21 +133,31 @@ class PositionListTableViewController: UITableViewController {
     
     // MARK: - data functions
     
+    private var _gj: String = "1-3年" //工作经验
+    private var _px: String = "px"
+    private var _city: String = "深圳"
+    private var _kd: String = "产品经理"
+    
+    func updatePositionType(type: String) {
+        _kd = type
+        _page = 1
+        _data.removeAll(keepCapacity: false)
+        _reloadTableView()
+        
+        title = type
+    }
+    
     private func _loadData() {
-        let gj: String = "1-3年" //工作经验
-        let px: String = "px"
-        let city: String = "深圳"
         let pn: Int = _page
-        let kd: String = "产品经理"
         let first: Bool = false
         
         let path: String = "http://www.lagou.com/jobs/positionAjax.json"
         let parameters: [String: AnyObject] = [
-            "gj": gj,
-            "px": px,
-            "city": city,
+            "gj": _gj,
+            "px": _px,
+            "city": _city,
             "pn": pn,
-            "kd": kd,
+            "kd": _kd,
             "first": first
         ]
         
@@ -177,9 +187,11 @@ class PositionListTableViewController: UITableViewController {
                 self._data += json["content"]["result"].arrayValue
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    //*
                     self.tableView.beginUpdates()
                     self.tableView.insertRowsAtIndexPaths(indexPathsForInsertRows, withRowAnimation: UITableViewRowAnimation.None)
                     self.tableView.endUpdates()
+                    //*/
                 })
             })
     }
@@ -285,6 +297,20 @@ class PositionListTableViewController: UITableViewController {
             if let image = response.result.value {
                 imageView.image = image
             }
+        }
+    }
+    
+    // MARK: - user actions
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let segueIdentifier = segue.identifier else {return}
+        
+        switch segueIdentifier {
+        case "link2typeSelectPage":
+            guard let vc = segue.destinationViewController as? PositionTypeSelectTableViewController else {return}
+            vc.positionListVC = self
+        default:
+            break
         }
     }
 

@@ -34,7 +34,7 @@
                                                 <constraint firstAttribute="width" constant="100" id="79S-7S-0XS"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.96078431369999995" green="0.054901960780000002" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="0.1764705882352941" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -43,7 +43,7 @@
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNe-7v-qVr">
-                                            <rect key="frame" x="12" y="102" width="442" height="17"/>
+                                            <rect key="frame" x="12" y="102" width="482" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="eIX-92-474"/>
                                             </constraints>
@@ -52,9 +52,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0Km 0min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrG-Xb-2Ng">
-                                            <rect key="frame" x="464" y="102" width="120" height="17"/>
+                                            <rect key="frame" x="504" y="102" width="80" height="17"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="120" id="C7A-P4-Jyj"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="C7A-P4-Jyj"/>
+                                                <constraint firstAttribute="width" constant="80" id="DKh-XJ-LxM"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.48627450980392156" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -189,11 +190,77 @@
                             <outlet property="delegate" destination="szB-UM-EGh" id="39N-aw-oVM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="xZF-0b-GUh"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="xZF-0b-GUh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Y88-Wv-p17">
+                            <color key="tintColor" red="1" green="0.1764705882352941" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="A4F-b1-g78" kind="show" identifier="link2typeSelectPage" id="4e7-OI-F5f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVW-y3-gM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="783" y="778"/>
+        </scene>
+        <!--Position Type Select Table View Controller-->
+        <scene sceneID="wse-Pu-ZKw">
+            <objects>
+                <tableViewController id="A4F-b1-g78" customClass="PositionTypeSelectTableViewController" customModule="LagouGI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ogq-V4-217">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="bigTypeCell" id="T0r-eC-erS">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T0r-eC-erS" id="cFE-hk-xwQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="S6Q-e1-j59" kind="show" identifier="link2SubType" id="2pb-z3-lwc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="A4F-b1-g78" id="FFI-9M-gkL"/>
+                            <outlet property="delegate" destination="A4F-b1-g78" id="GLc-4A-opd"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cg-xN-NuN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="778"/>
+        </scene>
+        <!--Position Sub Type Select Table View Controller-->
+        <scene sceneID="jd9-rX-SuO">
+            <objects>
+                <tableViewController id="S6Q-e1-j59" customClass="PositionSubTypeSelectTableViewController" customModule="LagouGI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tFy-fw-wup">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subTypeCell" id="yGh-eD-Lxv">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yGh-eD-Lxv" id="WrK-Fa-b7W">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="S6Q-e1-j59" id="nDa-cT-Bk4"/>
+                            <outlet property="delegate" destination="S6Q-e1-j59" id="F8E-75-t2B"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5s-il-ffC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2182" y="778"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HC6-Ru-tXw">
@@ -234,7 +301,8 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Loading..." id="Gkf-ma-Dk1">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="pfJ-WP-qP6">
+                                        <barButtonItem key="leftBarButtonItem" title="关闭" id="pfJ-WP-qP6">
+                                            <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="tapDoneButton:" destination="Ruh-2O-gdW" id="8fD-aa-5cM"/>
                                             </connections>
