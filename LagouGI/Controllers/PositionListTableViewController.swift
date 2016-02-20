@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Fuzi
-import SafariServices
+//import SafariServices
 import AlamofireImage
 
 private let _imageDownloader = ImageDownloader(

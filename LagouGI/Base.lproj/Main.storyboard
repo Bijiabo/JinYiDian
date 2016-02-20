@@ -269,6 +269,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="beS-Jm-2Fc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="szB-UM-EGh" kind="relationship" relationship="rootViewController" id="GSX-Zt-y4W"/>
