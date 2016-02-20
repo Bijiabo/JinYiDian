@@ -10,6 +10,15 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Fuzi
+import SafariServices
+import AlamofireImage
+
+private let _imageDownloader = ImageDownloader(
+    configuration: ImageDownloader.defaultURLSessionConfiguration(),
+    downloadPrioritization: .FIFO,
+    maximumActiveDownloads: 4,
+    imageCache: AutoPurgingImageCache()
+)
 
 class PositionListTableViewController: UITableViewController {
     
@@ -28,6 +37,8 @@ class PositionListTableViewController: UITableViewController {
         
         title = "LagouGI"
         clearsSelectionOnViewWillAppear = true
+        tableView.estimatedRowHeight = 180.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         _loadData()
         
@@ -55,17 +66,24 @@ class PositionListTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier("PositionListTableViewCell", forIndexPath: indexPath) as! PositionListTableViewCell
             let currentData = _data[indexPath.row]
             
-            cell.companyName = "\(currentData["companyName"].stringValue) - \(currentData["companyShortName"].stringValue)"
-            cell.companyInformation = "\(currentData["financeStage"].stringValue) - \(currentData["industryField"].stringValue) \n\(currentData["companySize"].stringValue)"
+            cell.companyName = currentData["companyName"].stringValue
+            cell.companyFullName = currentData["companyShortName"].stringValue
+            cell.industryField = currentData["industryField"].stringValue
+            cell.financeStage = currentData["financeStage"].stringValue
+            cell.companySize = currentData["companySize"].stringValue
             cell.salary = currentData["salary"].stringValue
             cell.positionId = currentData["positionId"].stringValue
+            cell.experience = currentData["workYear"].stringValue
+            cell.lure = currentData["positionAdvantage"].stringValue
+            
+            let companyLogoURLString: String = "http://www.lagou.com/\(currentData["companyLogo"].stringValue)"
+            _setRemoteImageForImageView(cell.logoImageView, URLString: companyLogoURLString)
             
             // get address information
-            cell.address = "获取地址中..."
             _loadPositionDataForPositionId(cell.positionId, indexPath: indexPath)
             
             // set background color
-            cell.backgroundColor = indexPath.row%2 == 0 ? UIColor(red:0.96, green:0.96, blue:0.96, alpha:1) : UIColor.whiteColor()
+            // cell.backgroundColor = indexPath.row%2 == 0 ? UIColor(red:0.96, green:0.96, blue:0.96, alpha:1) : UIColor.whiteColor()
             
             return cell
         } else {
@@ -84,7 +102,18 @@ class PositionListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         guard let cell = tableView.cellForRowAtIndexPath(indexPath) as? PositionListTableViewCell else {return}
         
-        _POIQueryForAddress(cell.address)
+        //_POIQueryForAddress(cell.address)
+        let urlString = "http://www.lagou.com/jobs/\(cell.positionId).html"
+        
+        if #available(iOS 9.0, *) {
+            let url: NSURL = NSURL(string: urlString)!
+            let svc = SFSafariViewController(URL: url)
+            self.presentViewController(svc, animated: true, completion: nil)
+        } else {
+            let webVC = storyboard?.instantiateViewControllerWithIdentifier("webVC") as! WebBrowserViewController
+            webVC.uri = urlString
+            self.presentViewController(webVC, animated: true, completion: nil)
+        }
     }
     
     // MARK: - Custom view functions
@@ -236,6 +265,17 @@ class PositionListTableViewController: UITableViewController {
         //发起路径搜索
         _search.AMapTransitRouteSearch(request)
     }
+    
+    private func _setRemoteImageForImageView(imageView: UIImageView, URLString: String) {
+        
+        let URL = NSURL(string: URLString)!
+        let avatarURLRequest = NSURLRequest(URL: URL)
+        _imageDownloader.downloadImage(URLRequest: avatarURLRequest) { (response) -> Void in
+            if let image = response.result.value {
+                imageView.image = image
+            }
+        }
+    }
 
 }
 
@@ -258,7 +298,21 @@ extension PositionListTableViewController: AMapSearchDelegate {
         
         let point = response.pois.first! as! AMapPOI
         _destinationIndex["\(point.location.latitude)-\(point.location.longitude)"] = request.keywords
-        _NavigaitonSearchToPoint(CLLocationCoordinate2D(latitude: Double(point.location.latitude), longitude: Double(point.location.longitude)))
+        let targetPointCLLocationCoordinate2D = CLLocationCoordinate2D(latitude: Double(point.location.latitude), longitude: Double(point.location.longitude))
+        _NavigaitonSearchToPoint(targetPointCLLocationCoordinate2D)
+        
+        // 计算直线距路
+        if let location = _location {
+            let userPoint = MAMapPointForCoordinate(location.coordinate)
+            let targetPoint = MAMapPointForCoordinate(targetPointCLLocationCoordinate2D)
+            let distance: CLLocationDistance = MAMetersBetweenMapPoints(userPoint, targetPoint)
+            let distanceInKm = Int(distance/100.0)/10
+            if let indexPath = _addressIndex[request.keywords] {
+                if let cell = tableView.cellForRowAtIndexPath(indexPath) as? PositionListTableViewCell {
+                    cell.distance = distanceInKm == 0 ? "" : "\(distanceInKm)Km"
+                }
+            }
+        }
     }
     
     func onRouteSearchDone(request: AMapRouteSearchBaseRequest!, response: AMapRouteSearchResponse!) {
