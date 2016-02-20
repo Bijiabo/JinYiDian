@@ -233,7 +233,7 @@
                                     <constraint firstAttribute="height" constant="44" id="5Xd-SQ-iyy"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="Gkf-ma-Dk1">
+                                    <navigationItem title="Loading..." id="Gkf-ma-Dk1">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="pfJ-WP-qP6">
                                             <connections>
                                                 <action selector="tapDoneButton:" destination="Ruh-2O-gdW" id="8fD-aa-5cM"/>

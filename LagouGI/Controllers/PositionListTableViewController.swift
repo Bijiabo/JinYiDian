@@ -31,6 +31,7 @@ class PositionListTableViewController: UITableViewController {
     private let _search = AMapSearchAPI()
     private var _addressIndex: [String: NSIndexPath] = [String: NSIndexPath]()
     private var _destinationIndex: [String: String] = [String: String]()
+    private var _loadingData: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,8 +90,10 @@ class PositionListTableViewController: UITableViewController {
         } else {
             let cell = UITableViewCell()
             
-            _page += 1
-            _loadData()
+            if !_loadingData {
+                _page += 1
+                _loadData()
+            }
             
             return cell
         }
@@ -104,16 +107,20 @@ class PositionListTableViewController: UITableViewController {
         
         //_POIQueryForAddress(cell.address)
         let urlString = "http://www.lagou.com/jobs/\(cell.positionId).html"
-        
+        /*
         if #available(iOS 9.0, *) {
             let url: NSURL = NSURL(string: urlString)!
-            let svc = SFSafariViewController(URL: url)
-            self.presentViewController(svc, animated: true, completion: nil)
-        } else {
-            let webVC = storyboard?.instantiateViewControllerWithIdentifier("webVC") as! WebBrowserViewController
-            webVC.uri = urlString
-            self.presentViewController(webVC, animated: true, completion: nil)
+            if 64 == 32 + (32 * CGFLOAT_IS_DOUBLE) {
+                let svc = SFSafariViewController(URL: url)
+                self.presentViewController(svc, animated: true, completion: nil)
+                return
+            }
+        
         }
+        */
+        let webVC = storyboard?.instantiateViewControllerWithIdentifier("webVC") as! WebBrowserViewController
+        webVC.uri = urlString
+        self.presentViewController(webVC, animated: true, completion: nil)
     }
     
     // MARK: - Custom view functions
@@ -146,8 +153,12 @@ class PositionListTableViewController: UITableViewController {
         
         if _pageMax == _page {return}
         
+        _loadingData = true
+        
         Alamofire.request(.GET, path, parameters: parameters)
             .responseSwiftyJSON({ (request, response, json, error) in
+                
+                self._loadingData = false
                 
                 if error != nil {
                     print(error)
@@ -167,7 +178,7 @@ class PositionListTableViewController: UITableViewController {
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.beginUpdates()
-                    self.tableView.insertRowsAtIndexPaths(indexPathsForInsertRows, withRowAnimation: UITableViewRowAnimation.Right)
+                    self.tableView.insertRowsAtIndexPaths(indexPathsForInsertRows, withRowAnimation: UITableViewRowAnimation.None)
                     self.tableView.endUpdates()
                 })
             })

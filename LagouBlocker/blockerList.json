@@ -1,0 +1,11 @@
+[
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "div#go_app"
+        },
+        "trigger": {
+            "url-filter": "https?://www.lagou.com/.*"
+        }
+    }
+]
