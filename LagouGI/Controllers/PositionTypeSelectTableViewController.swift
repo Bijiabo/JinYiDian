@@ -17,6 +17,7 @@ class PositionTypeSelectTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "职位搜索"
         _loadData()
     }
 
@@ -59,6 +60,7 @@ class PositionTypeSelectTableViewController: UITableViewController {
             guard let indexPath = tableView.indexPathForCell(cell) else {return}
             vc.data = _data[indexPath.row]["data"]
             vc.positionListVC = positionListVC
+            vc.title = _data[indexPath.row]["title"].stringValue
         default:
             break
         }

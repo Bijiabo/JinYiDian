@@ -15,6 +15,8 @@
 		6536E3E21C78A09E00BCA631 /* PositionTypeSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536E3E11C78A09E00BCA631 /* PositionTypeSelectTableViewController.swift */; };
 		6536E3E41C78A0BE00BCA631 /* PositionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 6536E3E31C78A0BE00BCA631 /* PositionData.json */; };
 		6536E3E61C78A2B700BCA631 /* PositionSubTypeSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536E3E51C78A2B700BCA631 /* PositionSubTypeSelectTableViewController.swift */; };
+		655F70401C7951F400421B07 /* PositionWorkYearSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655F703F1C7951F400421B07 /* PositionWorkYearSelectTableViewController.swift */; };
+		655F70421C7955DB00421B07 /* CitySelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655F70411C7955DB00421B07 /* CitySelectTableViewController.swift */; };
 		6591DBBB1C7712310020B3D3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB61C7712310020B3D3 /* AlamofireImage.framework */; };
 		6591DBBC1C7712310020B3D3 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB61C7712310020B3D3 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6591DBBD1C7712310020B3D3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6591DBB71C7712310020B3D3 /* SwiftyJSON.framework */; };
@@ -48,9 +50,6 @@
 		65C8FC681C774DA600C11DD6 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65C8FC661C774DA600C11DD6 /* AMap.bundle */; };
 		65C8FC691C774DA600C11DD6 /* AMapNavi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65C8FC671C774DA600C11DD6 /* AMapNavi.bundle */; };
 		65C8FC6E1C7812C800C11DD6 /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C8FC6D1C7812C800C11DD6 /* WebBrowserViewController.swift */; };
-		65C8FC761C783C8300C11DD6 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 65C8FC751C783C8300C11DD6 /* blockerList.json */; };
-		65C8FC781C783C8300C11DD6 /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C8FC771C783C8300C11DD6 /* ActionRequestHandler.swift */; };
-		65C8FC7C1C783C8300C11DD6 /* LagouBlocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 65C8FC731C783C8300C11DD6 /* LagouBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +59,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 65B08FA51C77115700E674D1;
 			remoteInfo = LagouGI;
-		};
-		65C8FC7A1C783C8300C11DD6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65B08F9E1C77115700E674D1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 65C8FC721C783C8300C11DD6;
-			remoteInfo = LagouBlocker;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -91,7 +83,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				65C8FC7C1C783C8300C11DD6 /* LagouBlocker.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +99,8 @@
 		6536E3E11C78A09E00BCA631 /* PositionTypeSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionTypeSelectTableViewController.swift; sourceTree = "<group>"; };
 		6536E3E31C78A0BE00BCA631 /* PositionData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = PositionData.json; path = ../JavaScript/PositionData.json; sourceTree = "<group>"; };
 		6536E3E51C78A2B700BCA631 /* PositionSubTypeSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionSubTypeSelectTableViewController.swift; sourceTree = "<group>"; };
+		655F703F1C7951F400421B07 /* PositionWorkYearSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionWorkYearSelectTableViewController.swift; sourceTree = "<group>"; };
+		655F70411C7955DB00421B07 /* CitySelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitySelectTableViewController.swift; sourceTree = "<group>"; };
 		6591DBB61C7712310020B3D3 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		6591DBB71C7712310020B3D3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		6591DBB81C7712310020B3D3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -141,7 +134,6 @@
 		65C8FC661C774DA600C11DD6 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = SDK/AMapNaviKit.framework/Versions/1.5.0.3533b29/Resources/AMap.bundle; sourceTree = "<group>"; };
 		65C8FC671C774DA600C11DD6 /* AMapNavi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapNavi.bundle; path = SDK/AMapNaviKit.framework/Versions/1.5.0.3533b29/Resources/AMapNavi.bundle; sourceTree = "<group>"; };
 		65C8FC6D1C7812C800C11DD6 /* WebBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserViewController.swift; sourceTree = "<group>"; };
-		65C8FC731C783C8300C11DD6 /* LagouBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LagouBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C8FC751C783C8300C11DD6 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		65C8FC771C783C8300C11DD6 /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		65C8FC791C783C8300C11DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -177,13 +169,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		65B08FBA1C77115700E674D1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65C8FC701C783C8300C11DD6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,6 +214,8 @@
 				65C8FC6D1C7812C800C11DD6 /* WebBrowserViewController.swift */,
 				6536E3E11C78A09E00BCA631 /* PositionTypeSelectTableViewController.swift */,
 				6536E3E51C78A2B700BCA631 /* PositionSubTypeSelectTableViewController.swift */,
+				655F703F1C7951F400421B07 /* PositionWorkYearSelectTableViewController.swift */,
+				655F70411C7955DB00421B07 /* CitySelectTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,7 +246,6 @@
 			children = (
 				65B08FA61C77115700E674D1 /* LagouGI.app */,
 				65B08FBD1C77115700E674D1 /* LagouGITests.xctest */,
-				65C8FC731C783C8300C11DD6 /* LagouBlocker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -319,7 +305,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				65C8FC7B1C783C8300C11DD6 /* PBXTargetDependency */,
 			);
 			name = LagouGI;
 			productName = LagouGI;
@@ -344,23 +329,6 @@
 			productReference = 65B08FBD1C77115700E674D1 /* LagouGITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		65C8FC721C783C8300C11DD6 /* LagouBlocker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 65C8FC7D1C783C8300C11DD6 /* Build configuration list for PBXNativeTarget "LagouBlocker" */;
-			buildPhases = (
-				65C8FC6F1C783C8300C11DD6 /* Sources */,
-				65C8FC701C783C8300C11DD6 /* Frameworks */,
-				65C8FC711C783C8300C11DD6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LagouBlocker;
-			productName = LagouBlocker;
-			productReference = 65C8FC731C783C8300C11DD6 /* LagouBlocker.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -377,9 +345,6 @@
 					65B08FBC1C77115700E674D1 = {
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = 65B08FA51C77115700E674D1;
-					};
-					65C8FC721C783C8300C11DD6 = {
-						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
@@ -398,7 +363,6 @@
 			targets = (
 				65B08FA51C77115700E674D1 /* LagouGI */,
 				65B08FBC1C77115700E674D1 /* LagouGITests */,
-				65C8FC721C783C8300C11DD6 /* LagouBlocker */,
 			);
 		};
 /* End PBXProject section */
@@ -421,14 +385,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65C8FC711C783C8300C11DD6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65C8FC761C783C8300C11DD6 /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,9 +431,11 @@
 				6511DA251C77163C004EC1A3 /* PositionListTableViewCell.swift in Sources */,
 				6511DA261C77163C004EC1A3 /* AMapSwift-Bridging-Header.h in Sources */,
 				65C8FC6E1C7812C800C11DD6 /* WebBrowserViewController.swift in Sources */,
+				655F70401C7951F400421B07 /* PositionWorkYearSelectTableViewController.swift in Sources */,
 				6536E3E21C78A09E00BCA631 /* PositionTypeSelectTableViewController.swift in Sources */,
 				6536E3E61C78A2B700BCA631 /* PositionSubTypeSelectTableViewController.swift in Sources */,
 				6511DA271C77163C004EC1A3 /* Alamofire-SwiftyJSON.swift in Sources */,
+				655F70421C7955DB00421B07 /* CitySelectTableViewController.swift in Sources */,
 				65B08FB21C77115700E674D1 /* LagouGI.xcdatamodeld in Sources */,
 				65B08FAA1C77115700E674D1 /* AppDelegate.swift in Sources */,
 			);
@@ -491,14 +449,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65C8FC6F1C783C8300C11DD6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65C8FC781C783C8300C11DD6 /* ActionRequestHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -506,11 +456,6 @@
 			isa = PBXTargetDependency;
 			target = 65B08FA51C77115700E674D1 /* LagouGI */;
 			targetProxy = 65B08FBE1C77115700E674D1 /* PBXContainerItemProxy */;
-		};
-		65C8FC7B1C783C8300C11DD6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 65C8FC721C783C8300C11DD6 /* LagouBlocker */;
-			targetProxy = 65C8FC7A1C783C8300C11DD6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -681,34 +626,6 @@
 			};
 			name = Release;
 		};
-		65C8FC7E1C783C8300C11DD6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				INFOPLIST_FILE = LagouBlocker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bijiabo.jinyidian.LagouBlocker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		65C8FC7F1C783C8300C11DD6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				INFOPLIST_FILE = LagouBlocker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bijiabo.jinyidian.LagouBlocker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -735,15 +652,6 @@
 			buildConfigurations = (
 				65B08FCA1C77115700E674D1 /* Debug */,
 				65B08FCB1C77115700E674D1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		65C8FC7D1C783C8300C11DD6 /* Build configuration list for PBXNativeTarget "LagouBlocker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				65C8FC7E1C783C8300C11DD6 /* Debug */,
-				65C8FC7F1C783C8300C11DD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

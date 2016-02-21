@@ -48,24 +48,26 @@ class PositionSubTypeSelectTableViewController: UITableViewController {
 
         return cell
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard let cell = tableView.cellForRowAtIndexPath(indexPath) else {return}
-        guard let value = cell.textLabel?.text else {return}
-        guard let positionListVC = positionListVC else {return}
-        
-        positionListVC.updatePositionType(value)
-        navigationController?.popToViewController(positionListVC, animated: true)
-    }
 
 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        guard let segueIdentifier = segue.identifier else {return}
+        
+        switch segueIdentifier {
+        case "link2workYearSelect":
+            guard let vc = segue.destinationViewController as? PositionWorkYearSelectTableViewController else {return}
+            guard let cell = sender as? UITableViewCell else {return}
+            guard let indexPath = tableView.indexPathForCell(cell) else {return}
+            vc.positionListVC = positionListVC
+            vc.title = data[indexPath.section]["data"][indexPath.row].stringValue
+        default:
+            break
+        }
     }
 
+    
 
 }

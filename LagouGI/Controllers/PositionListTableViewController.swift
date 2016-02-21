@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Fuzi
-//import SafariServices
+import SafariServices
 import AlamofireImage
 
 private let _imageDownloader = ImageDownloader(
@@ -21,6 +21,7 @@ private let _imageDownloader = ImageDownloader(
 )
 
 class PositionListTableViewController: UITableViewController {
+    @IBOutlet weak var citySelectButton: UIBarButtonItem!
     
     private var _data: [JSON] = [JSON]()
     private var _page: Int = 1
@@ -37,6 +38,7 @@ class PositionListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         title = _kd
+        citySelectButton.title = _city
         clearsSelectionOnViewWillAppear = true
         tableView.estimatedRowHeight = 180.0
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -135,16 +137,31 @@ class PositionListTableViewController: UITableViewController {
     
     private var _gj: String = "1-3年" //工作经验
     private var _px: String = "px"
-    private var _city: String = "深圳"
+    private var _city: String = "深圳" {
+        didSet {
+            citySelectButton.title = _city
+        }
+    }
     private var _kd: String = "产品经理"
     
-    func updatePositionType(type: String) {
+    func updateCity(city: String) {
+        _city = city
+        
+        _refershData()
+    }
+    
+    func updatePositionType(type: String, workYear: String) {
         _kd = type
+        _gj = workYear
+        title = type
+        
+        _refershData()
+    }
+    
+    private func _refershData() {
         _page = 1
         _data.removeAll(keepCapacity: false)
         _reloadTableView()
-        
-        title = type
     }
     
     private func _loadData() {
@@ -308,6 +325,9 @@ class PositionListTableViewController: UITableViewController {
         switch segueIdentifier {
         case "link2typeSelectPage":
             guard let vc = segue.destinationViewController as? PositionTypeSelectTableViewController else {return}
+            vc.positionListVC = self
+        case "link2citySelect":
+            guard let vc = segue.destinationViewController as? CitySelectTableViewController else {return}
             vc.positionListVC = self
         default:
             break
