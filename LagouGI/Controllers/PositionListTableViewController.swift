@@ -52,8 +52,18 @@ class PositionListTableViewController: UITableViewController {
         _locationManager.delegate = self
         _locationManager.desiredAccuracy = kCLLocationAccuracyBest
         _locationManager.startUpdatingLocation()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.attributedTitle = NSAttributedString(string: String())
+        refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl!)
+        tableView.sendSubviewToBack(refreshControl!)
     }
     
+    func refresh(sender: AnyObject) {
+        _refershData()
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -122,6 +132,7 @@ class PositionListTableViewController: UITableViewController {
         */
         let webVC = storyboard?.instantiateViewControllerWithIdentifier("webVC") as! WebBrowserViewController
         webVC.uri = urlString
+        webVC.address = cell.address
         self.presentViewController(webVC, animated: true, completion: nil)
     }
     
@@ -186,6 +197,7 @@ class PositionListTableViewController: UITableViewController {
             .responseSwiftyJSON({ (request, response, json, error) in
                 
                 self._loadingData = false
+                self.refreshControl?.endRefreshing()
                 
                 if error != nil {
                     print(error)

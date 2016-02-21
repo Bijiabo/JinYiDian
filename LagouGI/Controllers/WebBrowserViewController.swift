@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import WebKit
 
+
 class WebBrowserViewController: UIViewController {
     
     @IBOutlet weak var progressView: UIProgressView!
@@ -21,6 +22,7 @@ class WebBrowserViewController: UIViewController {
     private var myContext = 0
     
     var uri: String = "http://www.smashingmagazine.com"
+    var address: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +99,61 @@ class WebBrowserViewController: UIViewController {
     @IBAction func tapDoneButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func tapNavigationButton(sender: AnyObject) {
+        //配置导航参数
+        let config: MARouteConfig = MARouteConfig()
+        config.startCoordinate = CLLocationCoordinate2D(latitude: 22.54264, longitude: 114.056051)
+        config.destinationCoordinate = CLLocationCoordinate2D(latitude: 22.551185, longitude: 113.972113)
+        //终点坐标，Annotation的坐标
+        config.appScheme = self.getApplicationScheme()
+        //返回的Scheme，需手动设置
+        config.appName = self.getApplicationName()
+        config.transitStrategy = .Fastest
+        config.routeType = .Transit
+        
+        //若未调起高德地图App,引导用户获取最新版本的
+        /*
+        if !MAMapURLSearch.openAMapRouteSearch(config) {
+            MAMapURLSearch.getLatestAMapApp()
+        }
+        */
+        if let address = address {
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://maps.apple.com/?daddr=\(address)".stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!)
+        }
+        
+    }
+    
+    func getApplicationName() -> String {
+        let mainBundle = NSBundle.mainBundle()
+        let displayName = mainBundle.objectForInfoDictionaryKey("CFBundleDisplayName") as? String
+        let name = mainBundle.objectForInfoDictionaryKey(kCFBundleNameKey as String) as? String
+        return displayName ?? name ?? "Unknown"
+
+    }
+    
+    func getApplicationScheme() -> String {
+        let mainBundle = NSBundle.mainBundle()
+        if let URLTypes: [[String: AnyObject]] = mainBundle.objectForInfoDictionaryKey("CFBundleURLTypes") as? [[String: AnyObject]] {
+            var scheme: String = ""
+            for dic in URLTypes {
+                let URLName: String = dic["CFBundleURLName"] as! String
+                if URLName == NSBundle.mainBundle().bundleIdentifier {
+                    scheme = dic["CFBundleURLSchemes"]![0] as! String
+                    break
+                }
+            }
+            return scheme
+        }
+        
+        return ""
+//        var bundleInfo: [NSObject : AnyObject] = NSBundle.mainBundle().infoDictionary()
+//        var bundleIdentifier: String = NSBundle.mainBundle().bundleIdentifier()
+//        var URLTypes: [AnyObject] = bundleInfo.valueForKey("CFBundleURLTypes")
+        
+
+    }
+    
     // MARK: - helpful functions
     
     private func _setProgressViewToValue(value: Float, animated: Bool = true) {
